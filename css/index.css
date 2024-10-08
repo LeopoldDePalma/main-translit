@@ -1,0 +1,268 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'IBM Plex Mono', monospace;
+	background-color: #333;
+}
+
+.wrapper {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+}
+
+.title {
+	height: 52px;
+	position: relative;
+	top: 44px;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 52px;
+	text-align: center;
+	color: goldenrod;
+}
+
+.form {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	top: 138px;
+}
+
+.form-input {
+	display: block;
+	flex-direction: column;
+	height: 56px;
+	width: 500px;
+	border-radius: 14px;
+	padding: 5px 140px 5px 20px;
+	border: 2px solid #111111;
+	font-size: 18px;
+	z-index: 10;
+}
+
+.form-send-button {
+	display: inline-block;
+	height: 38px;
+	width: 107px;
+	position: absolute;
+	top: 9px;
+	right: 18px;
+	outline: none;
+	border-radius: 8px;
+	padding: 5px;
+	background-color: #111111;
+	cursor: pointer;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #ffffff;
+	z-index: 10;
+}
+
+.form-send-button:hover {
+	background-color: goldenrod;
+	transition: background-color 0.3s;
+	color: #111111;
+}
+
+.output {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	top: 190px;
+}
+
+.rusWord {
+	display: flex;
+	align-items: center;
+	width: 50%;
+	padding: 5px;
+	border-bottom: 2px solid #111111;
+	border-right: 2px solid #111111;
+	background-color: #f0f0f0;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.rusWord:first-child {
+	border-top-left-radius: 8px;
+}
+
+.rusWord:nth-last-child(2) {
+	border-bottom-left-radius: 8px;
+	border-bottom: none;
+}
+
+.index {
+	padding-right: 10px;
+	font-size: 14px;
+}
+
+.translitWord {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+	padding: 5px;
+	border-bottom: 2px solid #111111;
+	background-color: grey;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.translitWord:nth-child(2) {
+	border-top-right-radius: 8px;
+}
+
+.translitWord:last-child {
+	border-bottom-right-radius: 8px;
+	border-bottom: none;
+}
+
+.clear-button-element {
+	padding: 10px;
+	margin-right: 10px;
+	border: none;
+	border-radius: 100%;
+	background: url(https://img.icons8.com/ios-filled/250/cancel.png) center
+		center no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.clear-button-element:hover {
+	background-color: red;
+	transition: background-color 0.3s;
+}
+
+.tooltip {
+	max-height: 400px;
+	max-width: 250px;
+	position: relative;
+	border-radius: 10px;
+	padding: 6px;
+	border: 2px solid #111111;
+	background-color: #ffffff;
+	font-size: 16px;
+	color: #111111;
+	z-index: 10;
+	overflow-y: auto;
+	overflow-wrap: break-word;
+}
+
+.rusWord .tooltip {
+	position: absolute;
+	transform: translate(-20%, -50%);
+}
+
+.translitWord .tooltip {
+	position: absolute;
+	transform: translate(20%, -50%);
+}
+
+.clear-button {
+	height: 38px;
+	width: 176px;
+	position: relative;
+	top: 260px;
+	left: 162px;
+	border-radius: 8px;
+	padding: 6px 10px 8px 25px;
+	background-color: #adadad;
+	cursor: pointer;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #0f0f0f;
+}
+
+.clear-button:hover {
+	background-color: red;
+	transition: background-color 0.3s;
+}
+
+.icon-button {
+	position: relative;
+}
+
+.icon-button::before {
+	content: '';
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	top: 11px;
+	left: -4px;
+	transform: translate(-50%, -50%);
+	background: url(https://img.icons8.com/ios-filled/250/cancel.png) center
+		center no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+	.inner {
+		max-width: 328px;
+	}
+
+	.title {
+		height: 47px;
+		position: relative;
+		top: 20px;
+		font-size: 36px;
+		line-height: 46px;
+		text-align: center;
+	}
+
+	.form {
+		top: 123px;
+	}
+
+	.form-input {
+		height: 56px;
+		width: 328px;
+		font-size: 15px;
+	}
+
+	.form-send-button {
+		right: 10px;
+	}
+
+	.clear-button-element {
+		padding: 12px;
+	}
+
+	.tooltip {
+		max-height: 300px;
+		max-width: 150px;
+	}
+
+	.clear-button {
+		left: 76px;
+	}
+
+	.icon-button::before {
+		height: 24px;
+		width: 24px;
+	}
+}

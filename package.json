@@ -1,0 +1,25 @@
+{
+	"name": "main-translit-app",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+		"start": "npm run dev",
+		"build": "node ./build/builder.js",
+		"publish": "node ./build/builder.js --publish"
+	},
+	"author": "Konstantin Konyushkin",
+	"license": "ISC",
+	"description": "Translit App",
+	"keywords": [],
+	"devDependencies": {
+		"@eslint/js": "^9.12.0",
+		"eslint": "^9.12.0",
+		"globals": "^15.10.0",
+		"jest": "^29.7.0"
+	},
+	"dependencies": {
+		"build": "^0.1.4"
+	}
+}
